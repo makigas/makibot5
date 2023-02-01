@@ -1,0 +1,21 @@
+{
+  "name": "@makigas/makibotd",
+  "description": "The main server for the bot",
+  "type": "module",
+  "version": "5.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run transpile",
+    "test": "npm run build && node --test",
+    "start": "node dist/index",
+    "transpile": "tsc -p tsconfig.build.json",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@makigas/makibot-hooks": "^5.0.0"
+  }
+}

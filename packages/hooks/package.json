@@ -1,0 +1,17 @@
+{
+  "name": "@makigas/makibot-hooks",
+  "description": "hook manager",
+  "type": "module",
+  "version": "5.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run transpile",
+    "test": "npm run build && node --test",
+    "transpile": "tsc -p tsconfig.build.json",
+    "clean": "rimraf dist"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@makigas/makibot-persistence",
+  "description": "tag-value storage system",
+  "type": "module",
+  "version": "5.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run transpile",
+    "test": "npm run build && node --test",
+    "transpile": "tsc -p tsconfig.build.json",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "sequelize": "^6.28.0",
+    "sqlite3": "^5.1.4"
+  }
+}

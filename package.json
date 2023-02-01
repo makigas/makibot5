@@ -1,0 +1,33 @@
+{
+	"name": "@makigas/makibot",
+	"description": "The same bot that you used to know, but better",
+	"private": true,
+	"type": "module",
+	"workspaces": [
+		"packages/*",
+		"apps/*"
+	],
+	"scripts": {
+		"build": "npm run -ws build",
+		"test": "npm run -ws test",
+		"clean": "npm run -ws clean",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"fmt": "prettier --write apps packages",
+		"fmt:check": "prettier --check apps packages",
+		"options": "npm run -w @danirod/options start"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.48.2",
+		"@typescript-eslint/parser": "^5.48.2",
+		"eslint": "^8.32.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"prettier": "^2.8.3",
+		"rimraf": "^4.1.1",
+		"typescript": "^4.9.4"
+	},
+	"dependencies": {
+		"discord.js": "^14.7.1"
+	}
+}
